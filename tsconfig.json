@@ -21,3 +21,6 @@
   },
   "include": ["src"]
 }
+"scripts": {
+  "build": "vite build"
+}
