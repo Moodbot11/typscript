@@ -2,7 +2,6 @@
   "name": "evi-typescript-example-m2z3"
   }
   "version": "1.0.0",
-  "description": "a sample typescript project",
   "scripts": 
     "build": "tsc", "vite build",
     "preview": "vite preview",
