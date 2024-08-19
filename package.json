@@ -1,14 +1,14 @@
 {
   "name": "evi-typescript-example-m2z3"
-  },
+  }
   "version": "1.0.0",
-  "description": "a sample typeScript project",
+  "description": "a sample typescript project",
   "scripts": 
     "build": "tsc", "vite build",
     "preview": "vite preview",
   "dependencies": {
      "hume": "^0.8.6"
-  },
+  }
   "devDependencies": {
      "@wixc3/react-board": "^3.0.1",
     "typescript": "^5.2.2",
