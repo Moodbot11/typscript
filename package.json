@@ -1,20 +1,19 @@
 {
-  "name": "hume-evi-typescript-sample-",
-  "private": true,
+  "name": "hume-evi-typescript-sample",
   "version": "1.0.0",
-  "type": "module",
+  "description": "A sample TypeScript project",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc" && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "hume": "^0.8.6"
+     "hume": "^0.8.6"
   },
   "devDependencies": {
-    "@wixc3/react-board": "^3.0.1",
+     "@wixc3/react-board": "^3.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
-  },
-  
+  }
+}
+
  
