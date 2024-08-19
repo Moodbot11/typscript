@@ -3,10 +3,9 @@
   },
   "version": "1.0.0",
   "description": "a sample typeScript project",
-  "scripts": {
+  "scripts": 
     "build": "tsc", "vite build",
-    "preview": "vite preview"
-  },
+    "preview": "vite preview",
   "dependencies": {
      "hume": "^0.8.6"
   },
