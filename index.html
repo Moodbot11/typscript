@@ -32,6 +32,25 @@
         .luxury-travel, .concierge-service, .exclusive-access {
             min-height: 300px;
         }
+        #evi-assistant {
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #evi-assistant::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8));
+        }
+        #evi-assistant > div {
+            position: relative;
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-900 leading-normal tracking-wider">
@@ -108,26 +127,59 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section id="evi-assistant" class="py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Chat with EVI, Our AI Assistant</h2>
-            <div id="app" class="max-w-2xl mx-auto">
-                <div id="btn-container" class="flex justify-center space-x-4 mb-4">
-                    <button id="start-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Start</button>
-                    <button id="stop-btn" class="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition duration-300" disabled>Stop</button>
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Meet EVI, Your Personal Travel Assistant</h2>
+                <p class="text-xl mb-8">EVI is here to help you plan your perfect luxury getaway. Just listen and respond!</p>
+                <div id="evi-interface" class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+                    <div id="evi-avatar" class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1513082574801-5c9b8a8d3201?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8YWksIHJvYm90fHx8fHx8MTY4MzA5ODc5NQ&ixlib=rb-4.0.3&q=80&w=200" alt="EVI Avatar" class="w-32 h-32 rounded-full mx-auto border-4 border-blue-500">
+                    </div>
+                    <p id="evi-speech" class="text-lg font-medium mb-4">Hello! I'm EVI, your AI travel assistant. How can I help you plan your luxury adventure today?</p>
+                    <div id="user-response" class="mt-6">
+                        <p class="text-sm text-gray-600 mb-2">Your response:</p>
+                        <input type="text" id="user-input" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Type your response here...">
+                    </div>
                 </div>
-                <div id="heading-container" class="text-center mb-4">
-                    <h3 class="text-xl font-bold mb-2">Welcome to Antares Travel Club</h3>
-                    <p>
-                        Become an elite card carrying member today.
-                        Click the "Start" button and begin talking to interact with EVI.
-                    </p>
-                </div>
-                <div id="chat" class="bg-gray-100 p-6 rounded-lg shadow-md min-h-[200px]"></div>
             </div>
         </div>
     </section>
 
     <script type="module" src="/src/main.ts"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Simulating EVI's speech
+            const eviSpeeches = [
+                "Hello! I'm EVI, your AI travel assistant. How can I help you plan your luxury adventure today?",
+                "Would you like me to suggest some exclusive destinations based on your preferences?",
+                "I can also help you with booking luxury accommodations and arranging VIP experiences.",
+                "Don't hesitate to ask me about our concierge services or special access to events!"
+            ];
+
+            let speechIndex = 0;
+            const eviSpeech = document.getElementById('evi-speech');
+
+            function eviSpeak() {
+                eviSpeech.textContent = eviSpeeches[speechIndex];
+                speechIndex = (speechIndex + 1) % eviSpeeches.length;
+            }
+
+            // Start EVI speaking immediately and then every 10 seconds
+            eviSpeak();
+            setInterval(eviSpeak, 10000);
+
+            // Handle user input
+            const userInput = document.getElementById('user-input');
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    console.log("User said:", this.value);
+                    // Here you would typically send this input to your backend for processing
+                    this.value = ''; // Clear the input field
+                }
+            });
+        });
+    </script>
 </body>
 </html>
