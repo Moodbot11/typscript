@@ -286,7 +286,7 @@ button:disabled {
 }
 .container-custom {
     width: 100%;
-    max-width: 1200px; /* Adjust this value as needed */
+    max-width: 1500px; /* Adjust this value as needed */
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
