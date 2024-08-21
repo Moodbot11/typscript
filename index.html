@@ -1,73 +1,133 @@
-<section class="py-16 bg-gradient-to-r from-blue-500 to-purple-600">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8 text-white">Chat with EVI, Our AI Assistant</h2>
-        <div id="app" class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
-            <div id="btn-container" class="flex justify-center space-x-4 mb-4">
-                <button id="start-btn" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition duration-300">Start</button>
-                <button id="stop-btn" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition duration-300" disabled>Stop</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antares Travel Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .shadow-text {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+            .hero-section {
+                background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            }
+        }
+        .luxury-travel {
+            background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .concierge-service {
+            background-image: url('https://images.unsplash.com/photo-1587560699334-bea93391dcef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .exclusive-access {
+            background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .luxury-travel, .concierge-service, .exclusive-access {
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 leading-normal tracking-wider">
+    <header class="bg-gray-900 text-white p-4 fixed w-full z-10">
+        <div class="flex justify-between items-center px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Antares Travel Club Logo" class="h-8 w-auto mr-2">
+                <span class="text-2xl font-bold"><span class="text-red-500">Antares</span> Travel Club</span>
             </div>
-            <div id="heading-container" class="text-center mb-4">
-                <h3 class="text-xl font-bold mb-2">Welcome to Antares Travel Club</h3>
-                <p>
-                    Become an elite card carrying member today.
-                    Click the "Start" button and begin talking to interact with EVI.
-                </p>
-            </div>
-            <div id="chat" class="bg-gray-100 p-6 rounded-lg shadow-md min-h-[200px] max-h-[400px] overflow-y-auto"></div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-red-500">Home</a></li>
+                    <li><a href="#services" class="hover:text-red-500">Services</a></li>
+                    <li><a href="#video" class="hover:text-red-500">Experience</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const startBtn = document.getElementById('start-btn');
-        const stopBtn = document.getElementById('stop-btn');
-        const chat = document.getElementById('chat');
+    <section class="hero-section w-full min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 w-full">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 shadow-text">Exclusive Travel Experiences</h1>
+            <p class="text-xl sm:text-2xl mb-8 shadow-text">Discover the world with Antares Travel Club's premium services and unparalleled access to luxury destinations.</p>
+            <div class="max-w-md mx-auto bg-black bg-opacity-40 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Join Our Exclusive Club Today</h2>
+                <form>
+                    <input type="email" placeholder="Enter Email..." class="w-full p-2 mb-2 rounded-lg border border-gray-300 text-gray-900">
+                    <button type="submit" class="w-full bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        // Simulating EVI's speech
-        const eviSpeeches = [
-            "Hello! I'm EVI, your AI travel assistant. How can I help you plan your luxury adventure today?",
-            "Would you like me to suggest some exclusive destinations based on your preferences?",
-            "I can also help you with booking luxury accommodations and arranging VIP experiences.",
-            "Don't hesitate to ask me about our concierge services or special access to events!"
-        ];
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="luxury-travel bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Luxury Travel</h3>
+                        <p class="text-center">Experience the epitome of luxury with our carefully curated travel experiences.</p>
+                    </div>
+                </div>
+                <div class="concierge-service bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Concierge Service</h3>
+                        <p class="text-center">Our dedicated concierge team is available 24/7 to cater to your every need.</p>
+                    </div>
+                </div>
+                <div class="exclusive-access bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Exclusive Access</h3>
+                        <p class="text-center">Gain entry to the world's most coveted events and locations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        let speechIndex = 0;
+    <section id="video" class="w-full bg-gray-100">
+        <h2 class="text-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
+        <div class="w-full" style="height: 80vh;">
+            <iframe 
+                src="https://myidecide.net/XVI8RE" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen
+                class="w-full h-full"
+            ></iframe>
+        </div>
+    </section>
 
-        function eviSpeak() {
-            const message = document.createElement('p');
-            message.textContent = "EVI: " + eviSpeeches[speechIndex];
-            chat.appendChild(message);
-            speechIndex = (speechIndex + 1) % eviSpeeches.length;
-        }
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Chat with EVI, Our AI Assistant</h2>
+            <div id="app" class="max-w-2xl mx-auto">
+                <div id="btn-container" class="flex justify-center space-x-4 mb-4">
+                    <button id="start-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Start</button>
+                    <button id="stop-btn" class="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition duration-300" disabled>Stop</button>
+                </div>
+                <div id="heading-container" class="text-center mb-4">
+                    <h3 class="text-xl font-bold mb-2">Welcome to Antares Travel Club</h3>
+                    <p>
+                        Become an elite card carrying member today.
+                        Click the "Start" button and begin talking to interact with EVI.
+                    </p>
+                </div>
+                <div id="chat" class="bg-gray-100 p-6 rounded-lg shadow-md min-h-[200px]"></div>
+            </div>
+        </div>
+    </section>
 
-        startBtn.addEventListener('click', () => {
-            startBtn.disabled = true;
-            stopBtn.disabled = false;
-            eviSpeak();
-            // Here you would typically start your speech recognition
-        });
-
-        stopBtn.addEventListener('click', () => {
-            startBtn.disabled = false;
-            stopBtn.disabled = true;
-            // Here you would typically stop your speech recognition
-        });
-
-        // Simulating user input for demonstration
-        function simulateUserInput() {
-            const userMessages = [
-                "I'm interested in a luxury beach vacation.",
-                "Can you recommend some exclusive resorts?",
-                "What kind of VIP experiences can you arrange?",
-                "Tell me more about your concierge services."
-            ];
-            const message = document.createElement('p');
-            message.textContent = "User: " + userMessages[Math.floor(Math.random() * userMessages.length)];
-            chat.appendChild(message);
-            setTimeout(eviSpeak, 1000);
-        }
-
-        setInterval(simulateUserInput, 15000); // Simulate user input every 15 seconds
-    });
-</script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
