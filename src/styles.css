@@ -283,13 +283,6 @@ button:disabled {
     text-align: right;
     font-weight: bold;
     color: #666;
-.container-custom {
-    width: 100%;
-    max-width: 1200px; /* Adjust this value to match your footer width */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 .container-custom {
     width: 100%;
