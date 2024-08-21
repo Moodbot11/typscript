@@ -9,13 +9,24 @@
         .shadow-text {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+            .hero-section {
+                background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-900 leading-normal tracking-wider">
     <header class="bg-gray-900 text-white p-4 fixed w-full z-10">
         <div class="flex justify-between items-center px-4 md:px-8 max-w-7xl mx-auto">
             <div class="flex items-center">
-                <img src="logo.pbg" alt="Antares Travel Club Logo" class="h-8 w-auto mr-2">
+                <img src="logo.png" alt="Antares Travel Club Logo" class="h-8 w-auto mr-2">
                 <span class="text-2xl font-bold"><span class="text-red-500">Antares</span> Travel Club</span>
             </div>
             <nav>
@@ -26,24 +37,11 @@
                 </ul>
             </nav>
         </div>
-    <style>
-    .shadow-text {
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    .hero-section {
-        background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');
-    }
-    @media (max-width: 640px) {
-        .hero-section {
-            background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
-        }
-    }
-</style>
     </header>
 
-    <section class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+    <section class="hero-section w-full min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 w-full">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 shadow-text">Exclusive Travel Experiences</h1>
             <p class="text-xl sm:text-2xl mb-8 shadow-text">Discover the world with Antares Travel Club's premium services and unparalleled access to luxury destinations.</p>
             <div class="max-w-md mx-auto bg-black bg-opacity-40 p-6 rounded-lg">
@@ -114,4 +112,4 @@
 
     <script type="module" src="/src/main.ts"></script>
 </body>
-</html> in
+</html>
