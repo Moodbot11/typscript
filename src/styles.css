@@ -284,6 +284,15 @@ button:disabled {
     font-weight: bold;
     color: #666;
 }
+.container-custom {
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 footer {
     font-size: 0.9rem;
 }
