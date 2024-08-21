@@ -108,25 +108,27 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Chat with EVI, Our AI Assistant</h2>
-            <div id="app" class="max-w-2xl mx-auto">
+   <section class="py-16 bg-gradient-to-r from-blue-500 to-purple-600">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">Chat with EVI, Your AI Travel Assistant</h2>
+        <div id="app" class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6 bg-gray-100 border-b">
                 <div id="btn-container" class="flex justify-center space-x-4 mb-4">
-                    <button id="start-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Start</button>
-                    <button id="stop-btn" class="bg-gray-300 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-400 transition duration-300" disabled>Stop</button>
+                    <button id="start-btn" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition duration-300">Start</button>
+                    <button id="stop-btn" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition duration-300" disabled>Stop</button>
                 </div>
-                <div id="heading-container" class="text-center mb-4">
+                <div id="heading-container" class="text-center">
                     <h3 class="text-xl font-bold mb-2">Welcome to Antares Travel Club</h3>
-                    <p>
-                        Become an elite card carrying member today.
+                    <p class="text-gray-600">
+                        Become an elite card-carrying member today.
                         Click the "Start" button and begin talking to interact with EVI.
                     </p>
                 </div>
-                <div id="chat" class="bg-gray-100 p-6 rounded-lg shadow-md min-h-[200px]"></div>
             </div>
+            <div id="chat" class="bg-white p-6 h-96 overflow-y-auto"></div>
         </div>
-    </section>
+    </div>
+</section>
 
     <script type="module" src="/src/main.ts"></script>
 <script>
