@@ -157,3 +157,75 @@ button:disabled {
 .luxury-travel, .concierge-service, .exclusive-access {
     min-height: 300px;
 }
+.membership-tiers {
+    perspective: 1000px;
+}
+
+.tier {
+    background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.tier:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.tier h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tier ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tier li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.gold {
+    background-color: #FFD700;
+    color: #000;
+    border: 2px solid #FFA500;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.gold h2 {
+    color: #B8860B;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.platinum {
+    background-color: #E5E4E2;
+    color: #000;
+    border: 2px solid #A9A9A9;
+    box-shadow: 0 0 20px rgba(229, 228, 226, 0.5);
+}
+
+.platinum h2 {
+    color: #4E5754;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.diamond {
+    background-color: #B9F2FF;
+    color: #000;
+    border: 2px solid #4169E1;
+    box-shadow: 0 0 20px rgba(185, 242, 255, 0.5);
+}
+
+.diamond h2 {
+    color: #4169E1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
