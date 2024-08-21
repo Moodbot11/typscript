@@ -49,63 +49,12 @@ button:disabled {
 }
 
 #chat {
-  display: flex;
-  flex-direction: column;
-  height: 560px;
-  overflow-y: auto;
-  padding: 0 16px;
-}
-
-.chat-card {
-  background-color: white;
-  border-radius: 8px;
-  padding: 12px;
-  margin: 12px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-  position: relative;
-  width: 600px;
-}
-
-.chat-card .role {
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-.chat-card .timestamp {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 0.8em;
-  color: gray;
-}
-
-.chat-card .content {
-  margin-top: 12px;
-}
-
-.chat-card .scores {
-  display: flex;
-  justify-content: space-between;
-  width: 64%;
-  margin-top: 12px;
-  font-size: 0.8em;
-  color: gray;
-}
-
-.chat-card.user {
-  align-self: flex-start;
-}
-
-.chat-card.assistant {
-  align-self: flex-end;
-}
-#chat {
     scrollbar-width: thin;
     scrollbar-color: #CBD5E0 #EDF2F7;
 }
 
 #chat::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 #chat::-webkit-scrollbar-track {
@@ -115,14 +64,15 @@ button:disabled {
 #chat::-webkit-scrollbar-thumb {
     background-color: #CBD5E0;
     border-radius: 20px;
-    border: 3px solid #EDF2F7;
+    border: 2px solid #EDF2F7;
 }
 
 .chat-card {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
 }
 
 .chat-card.user {
@@ -135,25 +85,25 @@ button:disabled {
 
 .chat-card .role {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .chat-card .timestamp {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #718096;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .chat-card .content {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .chat-card .scores {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #718096;
 }
 
 .score-item {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
