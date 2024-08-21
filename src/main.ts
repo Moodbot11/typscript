@@ -355,7 +355,8 @@ import './styles.css';
 
     return topThreeEmotions;
   }
-    // Function to automatically start EVI
+
+  // Function to automatically start EVI
   async function autoStartEVI(): Promise<void> {
     if (!client) {
       await connect();
@@ -371,7 +372,6 @@ import './styles.css';
   // Call autoStartEVI when the DOM content is loaded
   document.addEventListener('DOMContentLoaded', autoStartEVI);
 
-})();
 })();
 
 /**
