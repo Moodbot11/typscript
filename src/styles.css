@@ -284,3 +284,37 @@ button:disabled {
     font-weight: bold;
     color: #666;
 }
+footer {
+    font-size: 0.9rem;
+}
+
+footer h3 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #3182ce;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer form input {
+    transition: box-shadow 0.3s ease;
+}
+
+footer form input:focus {
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.5);
+}
+
+footer .fab {
+    font-size: 1.2rem;
+}
