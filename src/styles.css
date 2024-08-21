@@ -48,32 +48,42 @@ button:disabled {
   justify-content: flex-end;
 }
 
-#.evi-background {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-size: cover;
-    background-position: center;
+.evi-section {
+    background: linear-gradient(135deg, #434343 0%, #000000 100%);
     position: relative;
+    overflow: hidden;
 }
 
-.evi-background::before {
+.evi-section::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+    background-image: 
+        linear-gradient(45deg, rgba(255,255,255,.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.1) 75%, transparent 75%, transparent),
+        linear-gradient(-45deg, rgba(255,255,255,.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.1) 75%, transparent 75%, transparent);
+    background-size: 60px 60px;
     opacity: 0.1;
+    pointer-events: none;
+}
+
+.shadow-text {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 #app {
-    position: relative;
-    z-index: 10;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 #chat {
+    background: rgba(255, 255, 255, 0.05);
     scrollbar-width: thin;
-    scrollbar-color: #CBD5E0 #EDF2F7;
+    scrollbar-color: #4a5568 #2d3748;
 }
 
 #chat::-webkit-scrollbar {
@@ -81,11 +91,11 @@ button:disabled {
 }
 
 #chat::-webkit-scrollbar-track {
-    background: #EDF2F7;
+    background: #2d3748;
 }
 
 #chat::-webkit-scrollbar-thumb {
-    background-color: #CBD5E0;
+    background-color: #4a5568;
     border-radius: 20px;
 }
 
@@ -93,27 +103,29 @@ button:disabled {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     font-size: 0.75rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
 }
 
 .chat-card.user {
-    background-color: rgba(230, 246, 255, 0.8);
+    background-color: rgba(66, 153, 225, 0.2);
 }
 
 .chat-card.assistant {
-    background-color: rgba(240, 244, 248, 0.8);
+    background-color: rgba(72, 187, 120, 0.2);
 }
 
 .chat-card .role {
     font-weight: bold;
     margin-bottom: 0.25rem;
+    color: #ffffff;
 }
 
 .chat-card .timestamp {
     font-size: 0.65rem;
-    color: #718096;
+    color: #a0aec0;
     margin-bottom: 0.25rem;
 }
 
@@ -123,7 +135,7 @@ button:disabled {
 
 .chat-card .scores {
     font-size: 0.65rem;
-    color: #718096;
+    color: #a0aec0;
 }
 
 .score-item {
