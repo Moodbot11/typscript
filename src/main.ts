@@ -355,23 +355,6 @@ import './styles.css';
 
     return topThreeEmotions;
   }
-
-  // Function to automatically start EVI
-  async function autoStartEVI(): Promise<void> {
-    if (!client) {
-      await connect();
-    }
-    // Wait for a moment to ensure the connection is established
-    setTimeout(async () => {
-      if (!audioStream) {
-        await captureAudio();
-      }
-    }, 2000); // Adjust this delay if needed
-  }
-
-  // Call autoStartEVI when the DOM content is loaded
-  document.addEventListener('DOMContentLoaded', autoStartEVI);
-
 })();
 
 /**
