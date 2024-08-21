@@ -149,37 +149,44 @@
     <script type="module" src="/src/main.ts"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Simulating EVI's speech
-            const eviSpeeches = [
-                "Hello! I'm EVI, your AI travel assistant. How can I help you plan your luxury adventure today?",
-                "Would you like me to suggest some exclusive destinations based on your preferences?",
-                "I can also help you with booking luxury accommodations and arranging VIP experiences.",
-                "Don't hesitate to ask me about our concierge services or special access to events!"
-            ];
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
+        const chat = document.getElementById('chat');
 
-            let speechIndex = 0;
-            const eviSpeech = document.getElementById('evi-speech');
+        // Function to simulate EVI speaking
+        function eviSpeak(message) {
+            const eviMessage = document.createElement('p');
+            eviMessage.textContent = "EVI: " + message;
+            chat.appendChild(eviMessage);
+            
+            // Here you would typically call your text-to-speech function
+            // For example: speakText(message);
+        }
 
-            function eviSpeak() {
-                eviSpeech.textContent = eviSpeeches[speechIndex];
-                speechIndex = (speechIndex + 1) % eviSpeeches.length;
-            }
+        // Automatically start EVI when the page loads
+        setTimeout(() => {
+            eviSpeak("Hello! I'm EVI, your AI travel assistant. How can I help you plan your luxury adventure today?");
+        }, 1000); // Small delay to ensure everything is loaded
 
-            // Start EVI speaking immediately and then every 10 seconds
-            eviSpeak();
-            setInterval(eviSpeak, 10000);
-
-            // Handle user input
-            const userInput = document.getElementById('user-input');
-            userInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    console.log("User said:", this.value);
-                    // Here you would typically send this input to your backend for processing
-                    this.value = ''; // Clear the input field
-                }
-            });
+        // Keep the existing button functionality
+        startBtn.addEventListener('click', () => {
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+            // Here you would typically start your speech recognition
+            // For example: startSpeechRecognition();
         });
-    </script>
+
+        stopBtn.addEventListener('click', () => {
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            // Here you would typically stop your speech recognition
+            // For example: stopSpeechRecognition();
+        });
+
+        // You can add more functions here to handle speech recognition results
+        // and trigger EVI's responses accordingly
+    });
+</script>
 </body>
 </html>
