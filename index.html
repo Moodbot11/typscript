@@ -6,6 +6,8 @@
     <title>Besort - Beach Club & Resort</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Cormorant:wght@600&display=swap" rel="stylesheet">
      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -103,28 +105,15 @@
             effect: 'fade',
         });
     </script>
-<script>
+<<script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize Swiper
-        var swiper = new Swiper('.swiper-container', {
+        new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
                 delay: 5000,
             },
             effect: 'fade',
         });
-
-        // Function to activate the bot
-        function activateBot() {
-            const startBtn = document.getElementById('start-btn');
-            if (startBtn) {
-                startBtn.click();
-                console.log('Bot activated');
-            }
-        }
-
-        // Activate bot after a short delay to ensure Swiper is initialized
-        setTimeout(activateBot, 500);
     });
 </script>
 <section id="video" class="w-full bg-gray-100 py-16">
