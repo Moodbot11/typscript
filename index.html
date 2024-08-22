@@ -48,8 +48,27 @@
     </header>
          <main>
     
-        </section>
-       
+       <div id="simple-carousel" class="relative h-screen overflow-hidden">
+    <div class="absolute inset-0 transition-opacity duration-1000" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg'); background-size: cover; background-position: center;"></div>
+</div>
+
+<script>
+    function simpleCarousel() {
+        const slides = document.querySelectorAll('#simple-carousel > div');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.add('opacity-0');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.remove('opacity-0');
+        }, 5000); // Change slide every 5 seconds
+    }
+
+    // Run the carousel without an event listener
+    simpleCarousel();
+</script>       
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
