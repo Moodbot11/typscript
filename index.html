@@ -135,7 +135,24 @@
                 </div>
             </div>
         </section>
+   
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
 
+        // Simulate clicking the start button when the page loads
+        setTimeout(() => {
+            startBtn.click();
+            
+            // Simulate clicking the stop button after a short delay
+            setTimeout(() => {
+                stopBtn.click();
+            }, 100); // Adjust this delay if needed
+        }, 1000); // Delay to ensure everything is loaded
+    });
+</script>
         <section class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
