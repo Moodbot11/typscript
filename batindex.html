@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antares Travel Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .shadow-text {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+            .hero-section {
+                background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            }
+        }
+        .luxury-travel {
+            background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .concierge-service {
+            background-image: url('https://images.unsplash.com/photo-1587560699334-bea93391dcef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .exclusive-access {
+            background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+        }
+        .luxury-travel, .concierge-service, .exclusive-access {
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 leading-normal tracking-wider">
+    <header class="bg-gray-900 text-white p-4 fixed w-full z-10">
+        <div class="flex justify-between items-center px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Antares Travel Club Logo" class="h-8 w-auto mr-2">
+                <span class="text-2xl font-bold"><span class="text-red-500">Antares</span> Travel Club</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-red-500">Home</a></li>
+                    <li><a href="#services" class="hover:text-red-500">Services</a></li>
+                    <li><a href="#video" class="hover:text-red-500">Experience</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section w-full min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 w-full">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 shadow-text">Exclusive Travel Experiences</h1>
+            <p class="text-xl sm:text-2xl mb-8 shadow-text">Discover the world with Antares Travel Club's premium services and unparalleled access to luxury destinations.</p>
+            <div class="max-w-md mx-auto bg-black bg-opacity-40 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Join Our Exclusive Club Today</h2>
+                <form>
+                    <input type="email" placeholder="Enter Email..." class="w-full p-2 mb-2 rounded-lg border border-gray-300 text-gray-900">
+                    <button type="submit" class="w-full bg-red-500 text-white p-2 rounded-lg hover:bg-red-600 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="luxury-travel bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Luxury Travel</h3>
+                        <p class="text-center">Experience the epitome of luxury with our carefully curated travel experiences.</p>
+                    </div>
+                </div>
+                <div class="concierge-service bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Concierge Service</h3>
+                        <p class="text-center">Our dedicated concierge team is available 24/7 to cater to your every need.</p>
+                    </div>
+                </div>
+                <div class="exclusive-access bg-cover bg-center p-6 rounded-lg shadow-md relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative z-10 text-white">
+                        <h3 class="text-xl font-bold mb-2 text-center">Exclusive Access</h3>
+                        <p class="text-center">Gain entry to the world's most coveted events and locations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="w-full bg-gray-100">
+        <h2 class="text-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
+        <div class="w-full" style="height: 80vh;">
+            <iframe 
+                src="https://myidecide.net/XVI8RE" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen
+                class="w-full h-full"
+            ></iframe>
+        </div>
+    </section>
+<section class="evi-section py-16 min-h-screen w-full flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white shadow-text"> Click the button to speak with an agent 24 hours a day</h2>
+        <div id="app" class="max-w-sm mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg overflow-hidden border border-gray-200 border-opacity-30">
+            <div class="p-4 bg-gray-100 bg-opacity-20 border-b border-gray-200 border-opacity-30">
+                <div id="btn-container" class="flex justify-center space-x-4 mb-4">
+                    <button id="start-btn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Start</button>
+                    <button id="stop-btn" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300" disabled>Stop</button>
+                </div>
+                <div id="heading-container" class="text-center">
+                    <h3 class="text-lg font-bold mb-2 text-white">Welcome to Antares Travel Club</h3>
+                    <p class="text-sm text-gray-200">
+                        Click "Start" and and you'll be connected to an agent immediately.
+                    </p>
+                </div>
+            </div>
+            <div id="chat" class="bg-white bg-opacity-10 p-4 h-40 overflow-y-auto"></div>
+        </div>
+    </div>
+</section>
+
+    <script type="module" src="/src/main.ts"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
+
+        // Simulate clicking the start button when the page loads
+        setTimeout(() => {
+            startBtn.click();
+            
+            // Simulate clicking the stop button after a short delay
+            setTimeout(() => {
+                stopBtn.click();
+            }, 100); // Adjust this delay if needed
+        }, 1000); // Delay to ensure everything is loaded
+    });
+</script><section id="membership-tiers" class="py-16 bg-gray-900">
+    <div class="container-custom">
+        <h2 class="text-3xl font-bold text-center mb-12 text-white">Membership Tiers</h2>
+        <div class="membership-tiers grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="tier gold">
+                <h2>Gold</h2>
+                <ul>
+                    <li>Club Platform and Booking Engine</li>
+                    <li>Best Price Promise</li>
+                    <li>Daily Discounts</li>
+                    <li>Fast Pass Passport and Visa Service</li>
+                    <li>Luggage Storage</li>
+                    <li>Member Only Vacation/Holiday Rentals</li>
+                    <li>Private Yacht Service</li>
+                    <li>Travel Marketplace (US Only)</li>
+                    <li>Airport Lounge Access</li>
+                </ul>
+            </div>
+            <div class="tier platinum">
+                <h2>Platinum</h2>
+                <ul>
+                    <li>All Gold benefits, plus:</li>
+                    <li>Concierge Assistant</li>
+                    <li>Flight Insurance</li>
+                    <li>Frequent Flyer Help Desk</li>
+                    <li>Global Office</li>
+                    <li>Med Assure (200K)</li>
+                    <li>Member Only Tours & Activities</li>
+                    <li>Personal Travel Agent</li>
+                    <li>Travel Legal Assistance</li>
+                    <li>Airport Lounge Access (4 Free)</li>
+                    <li>Bag Assure - Individual</li>
+                </ul>
+            </div>
+            <div class="tier diamond">
+                <h2>Diamond</h2>
+                <ul>
+                    <li>All Platinum benefits, plus:</li>
+                    <li>Airport Lounge Access (Unlimited)</li>
+                    <li>Bag Assure - Family</li>
+                    <li>Dog in a Suitcase Unlimited Vacations</li>
+                    <li>Global Data eSIM (Subscription)</li>
+                    <li>Med Jet Services</li>
+                    <li>Private Jet Service</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="testimonials" class="py-16 bg-gray-100">
+    <div class="container-custom">
+        <h2 class="text-3xl font-bold text-center mb-12">What Our Members Say</h2>
+        <div class="testimonial-columns flex space-x-8">
+            <div class="testimonial-column w-1/2 h-96 overflow-y-auto">
+                <div class="testimonial">
+                    <p>"The luxury travel experiences with Antares are unparalleled. I'm so happy I joined!"</p>
+                    <span class="author">- Emma S.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Their concierge service is top-notch. They've made my travels stress-free and enjoyable."</p>
+                    <span class="author">- James L.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"I've had access to events I never thought possible. Antares truly delivers on exclusivity."</p>
+                    <span class="author">- Sophia R.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The personalized attention to detail in every trip is remarkable. I feel like a VIP every time."</p>
+                    <span class="author">- Michael T.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Antares has transformed the way I travel. Their global network is impressive!"</p>
+                    <span class="author">- Olivia P.</span>
+                </div>
+            </div>
+            <div class="testimonial-column w-1/2 h-96 overflow-y-auto">
+                <div class="testimonial">
+                    <p>"The private jet service is a game-changer. I can't imagine traveling any other way now."</p>
+                    <span class="author">- William H.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Their travel marketplace has incredible deals. I've saved so much while enjoying luxury."</p>
+                    <span class="author">- Isabella G.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The member-only tours are fantastic. I've had experiences I couldn't have arranged on my own."</p>
+                    <span class="author">- Ethan K.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Antares' attention to detail is impeccable. They think of everything before I even ask."</p>
+                    <span class="author">- Ava M.</span>
+                </div>
+                <div class="testimonial">
+                    <p>"The best travel decision I've ever made was joining Antares. It's been incredible!"</p>
+                    <span class="author">- Noah C.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4">Antares Travel Club</h3>
+                <p class="mb-4">Luxury travel experiences for the discerning adventurer.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Services</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Membership</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p class="mb-2">123 Luxury Lane, Suite 456</p>
+                <p class="mb-2">Paradise City, PC 78901</p>
+                <p class="mb-2">Phone: (123) 456-7890</p>
+                <p>Email: info@antarestravel.com</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                <p class="mb-4">Subscribe to our newsletter for exclusive travel offers and tips.</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="p-2 w-full text-gray-900 rounded-l-md focus:outline-none">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+            <p>&copy; 2023 Antares Travel Club. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html> 
