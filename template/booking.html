@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form - Metform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #666666;
+            background-color: #F6F6F6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+            background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(66, 145, 152, 0.9);
+            z-index: 1;
+        }
+        .form-content {
+            position: relative;
+            z-index: 2;
+        }
+        h4 {
+            font-family: 'Cormorant', serif;
+            color: #F6F6F6;
+            text-align: center;
+            font-size: 1.9rem;
+            margin-bottom: 1em;
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #F6F6F6;
+            font-weight: 500;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #F6F6F6;
+            color: #429198;
+            font-size: 0.9rem;
+        }
+        input::placeholder, select::placeholder {
+            color: #7A7A7A;
+        }
+        button {
+            width: 100%;
+            padding: 15px 30px;
+            background-color: #FA7F08;
+            color: #F6F6F6;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #429198;
+        }
+        .footer-text {
+            text-align: center;
+            color: #F6F6F6;
+            margin-top: 1em;
+        }
+        .footer-text a {
+            color: #F6F6F6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-content">
+            <h4>Booking Now & Enjoy it !</h4>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="guest">Guest</label>
+                    <input type="number" id="guest" name="guest" placeholder="Number of Guest" required>
+                </div>
+                <div class="form-group">
+                    <label for="lounge">Choose a Lounge</label>
+                    <select id="lounge" name="lounge" required>
+                        <option value="">Select Lounge</option>
+                        <option value="value-1">Item 1</option>
+                        <option value="value-2">Item 2</option>
+                        <option value="value-3">Item 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="check-in">Check in</label>
+                    <input type="date" id="check-in" name="check-in" placeholder="Check In" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Check out</label>
+                    <input type="date" id="check-out" name="check-out" placeholder="Check out" required>
+                </div>
+                <button type="submit">BOOKING NOW !</button>
+            </form>
+            <p class="footer-text">We have more Best lounges, <a href="#">View all Lounges</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            console.log('Booking form submitted');
+        });
+    </script>
+</body>
+</html>

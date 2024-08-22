@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besort Footer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #F6F6F6;
+        }
+        .footer {
+            background-color: #429198;
+            padding: 6em 1em 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-logo {
+            flex: 0 0 40%;
+        }
+        .footer-logo img {
+            max-width: 100%;
+            height: 141px;
+            object-fit: contain;
+        }
+        .footer-contact, .footer-links, .footer-social {
+            flex: 0 0 20%;
+        }
+        h4 {
+            color: #F6F6F6;
+            margin-bottom: 1em;
+        }
+        .icon-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .icon-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-list i {
+            color: #FA7F08;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .social-icons a {
+            color: #FA7F08;
+            background-color: #F6F6F6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px 10px 0;
+            text-decoration: none;
+        }
+        .footer-bottom {
+            margin-top: 70px;
+            padding: 20px 0;
+            border-top: 1px solid #F6F6F6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-bottom-links a {
+            color: #F6F6F6;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .footer-bottom-links a:hover {
+            color: #FA7F08;
+        }
+        @media (max-width: 768px) {
+            .footer-content > div {
+                flex: 0 0 100%;
+                margin-bottom: 2em;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-bottom-links {
+                margin-bottom: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/Logo.png" alt="Besort Logo">
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Besort is ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit tellus luctus nec.</p>
+                    <ul class="icon-list">
+                        <li><i class="icon icon-phone-call2"></i> Phone Number : 123-234-1234</li>
+                        <li><i class="icon icon-map-marker1"></i> Besort Address : Pekanbaru, Riau, Indonesia</li>
+                        <li><i class="icon icon-clock2"></i> Mon - Sun : 08.00 AM - 00.00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul class="icon-list">
+                        <li><i class="icon icon-arrow-right-circle"></i> Home</li>
+                        <li><i class="icon icon-arrow-right-circle"></i> About</li>
+                        <li><i class="icon icon-arrow-right-circle"></i> Reservation</li>
+                        <li><i class="icon icon-arrow-right-circle"></i> Activities</li>
+                        <li><i class="icon icon-arrow-right-circle"></i> Menu</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Service</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>Copyright 2022 © All Right Reserved Design by Rometheme</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

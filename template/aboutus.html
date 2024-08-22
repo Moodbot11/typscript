@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Besort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #666666;
+            background-color: #F6F6F6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant', serif;
+            color: #202020;
+        }
+        .hero {
+            background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');
+            background-size: cover;
+            background-position: top center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        .about-section {
+            padding: 6em 1em 0;
+        }
+        .about-content {
+            display: flex;
+            gap: 2em;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+        .about-text {
+            flex: 1;
+            padding-left: 5em;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+        }
+        .feature-item img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>About Us</h1>
+            <p><a href="#">Home</a> / About Us</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/woman-on-the-beach-in-the-palm-trees-shadow-wearin-JR9VMGL.jpg" alt="Woman on the beach">
+                </div>
+                <div class="about-text">
+                    <h2 style="color: #FA7F08;">About Besort</h2>
+                    <h3>Besort is Beach Club & Resort With Beautiful Beaches</h3>
+                    <p>About Besort ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit, a scelerisque purus. Proin sollicitudin suscipit scelerisque. Nulla vel sapien viverra, varius augue lobortis, lobortis enim.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ2.png" alt="Best Beach Club">
+                            <div>
+                                <h4>Best Beach Club</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus,luctus nec</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ1.png" alt="Best Resort">
+                            <div>
+                                <h4>Best Resort</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus,luctus nec</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3>Get a Discount For Newly Married Couples</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus.</p>
+                <button class="cta-button">CONTACT US</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="activities-section">
+        <div class="container">
+            <h2 style="color: #F6F6F6;">Besort Activities</h2>
+            <h3 style="color: #F6F6F6;">Conquer The Sea With Our Beach Parties</h3>
+            <button class="reservation-button">RESERVATION NOW</button>
+
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/leisure-travel-luxury-outdoor-area-by-the-pool-WFNZCQS.jpg" alt="Pool Besort">
+                    <div class="activity-content">
+                        <h4>Pool Besort</h4>
+                        <p>Pool Area</p>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/straw-houses-on-a-sandy-beach-with-tropical-flora-PBFW4T2.jpg" alt="Besort Beach">
+                    <div class="activity-content">
+                        <h4>Besort Beach</h4>
+                        <p>Beautiful Beach</p>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/young-trendy-friends-toasting-beer-at-chiringuito-9HBTSKW.jpg" alt="Besort Bar">
+                    <div class="activity-content">
+                        <h4>Besort Bar</h4>
+                        <p>Wine Bar</p>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/young-people-having-cocktail-party-PGHPMB9.jpg" alt="Besort Cocktail">
+                    <div class="activity-content">
+                        <h4>Besort Cocktail</h4>
+                        <p>Cocktail Collection</p>
+                        <p>A small river named Duden flows by their place and supplies it with the necessary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2 style="color: #FA7F08;">Take a Look Our Gallery</h2>
+            <h3>Check Out The Luxury at Our Resort & Beach Club</h3>
+            <p>Our Gallery dolor sit amet consectetur adipiscing elit cras in auctor elit a scelerisqu</p>
+            
+            <div class="gallery-grid">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/attractive-young-woman-in-blue-swimsuit-with-open-BKJK7AN.jpg" alt="Gallery 1">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-friends-toasting-at-the-beach-7ASJZA2.jpg" alt="Gallery 2">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/loving-couple-drinking-cocktails-in-hotel-CPXU4RU.jpg" alt="Gallery 3">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/honeymooners-in-a-swimming-pool-at-a-resort-WNHTEDL.jpg" alt="Gallery 4">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beautiful-and-elegant-girl-on-a-resort-PGLKJ9U.jpg" alt="Gallery 5">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/two-elegant-girls-on-a-resort-VSNW7AV.jpg" alt="Gallery 6">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/woman-on-the-beach-touching-palm-tree-leaf-shadow-MWPAZXL.jpg" alt="Gallery 7">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .cta-section {
+            background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/two-elegant-girls-on-a-resort-JCYHG48.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6em 1em;
+            position: relative;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(66, 145, 152, 0.8);
+        }
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 50%;
+        }
+        .cta-button {
+            background-color: transparent;
+            color: #F6F6F6;
+            border: 3px solid #F6F6F6;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #F6F6F6;
+            color: #429198;
+        }
+        .activities-section {
+            background-color: #429198;
+            color: white;
+            padding: 6em 1em 3em;
+        }
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 2em;
+        }
+        .activity-card {
+            background-color: #F6F6F6;
+            color: #202020;
+            overflow: hidden;
+        }
+        .activity-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .activity-content {
+            padding: 1em;
+        }
+        .reservation-button {
+            background-color: transparent;
+            color: #F6F6F6;
+            border: 3px solid #F6F6F6;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            float: right;
+        }
+        .reservation-button:hover {
+            background-color: #F6F6F6;
+            color: #429198;
+        }
+        .gallery-section {
+            padding: 6em 1em;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 2em;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .cta-content {
+                max-width: 100%;
+            }
+            .activities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+        <section class="testimonial-section">
+        <div class="container">
+            <i class="fas fa-quote-left" style="color: #FA7F08; font-size: 2em;"></i>
+            <blockquote>
+                Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullamcorper ante, quis faucibus sapien. Maecenas ut tortor ac enim aliquam venenatis. Vestibulum ullamcorper, metus luctus malesuada aliquam, mauris magna auctor nibh, et maximus enim est in eros. Proin ac nibh ac nibh convallis auctor quis ut arcu. Cras sagittis suscipit velit, eu gravida nisi congue at. Pellentesque quis sollicitudin est, ut aliquet justo. Phasellus maximus sagittis egestas.
+            </blockquote>
+            <div class="testimonial-author">
+                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/smart-nerdy-girl-discussing-new-inventions-portrai-9AWR967.jpg" alt="John Doe">
+                <div>
+                    <h4>John Doe</h4>
+                    <p>Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>120+</h3>
+                    <p>Available Menus</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <h3>98%</h3>
+                    <p>Positive Reviews</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>39+</h3>
+                    <p>Professional Staff</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-home"></i>
+                    <h3>79+</h3>
+                    <p>Room Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="team-header">
+                <div>
+                    <h2 style="color: #FA7F08;">Our Team</h2>
+                    <h3>Meet With Best Staff in Besort</h3>
+                </div>
+                <button class="view-all-button">VIEW ALL TEAM</button>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/great-suggestion-nice-work-satisfied-and-pleased-f-6EZCCAS-1.jpg" alt="Abraham Bancroft">
+                    <h4>Abraham Bancroft</h4>
+                    <p>CEO of Besort</p>
+                </div>
+                <div class="team-member">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/portrait-of-young-woman-holding-in-arms-tablet-com-CNYKQD7-1.jpg" alt="Meghan Trainor">
+                    <h4>Meghan Trainor</h4>
+                    <p>Besort | Marketing</p>
+                </div>
+                <div class="team-member">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/handsome-man-is-all-ears-participating-in-interest-URLV2GE.jpg" alt="Beck Caython">
+                    <h4>Beck Caython</h4>
+                    <p>Besort | Front Desk</p>
+                </div>
+                <div class="team-member">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/smart-nerdy-girl-discussing-new-inventions-portrai-9AWR967-1.jpg" alt="Abigail Caitlyn">
+                    <h4>Abigail Caitlyn</h4>
+                    <p>Besort | Barista</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Besort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .testimonial-section {
+            padding: 6em 1em;
+            background-color: #F6F6F6;
+            text-align: center;
+        }
+        .testimonial-section blockquote {
+            font-style: italic;
+            font-size: 1.2em;
+            margin: 2em 0;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1em;
+        }
+        .stats-section {
+            background-color: #429198;
+            color: white;
+            padding: 3em 1em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .stat-item i {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+        .stat-item h3 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .team-section {
+            padding: 6em 1em;
+        }
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2em;
+        }
+        .view-all-button {
+            background-color: transparent;
+            border: 3px solid #FA7F08;
+            color: #FA7F08;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .view-all-button:hover {
+            background-color: #FA7F08;
+            color: white;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .team-member {
+            text-align: center;
+            position: relative;
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+        }
+        .social-icons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .social-icons a {
+            background-color: #FA7F08;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #429198;
+        }
+        @media (max-width: 768px) {
+            .stats-grid, .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .team-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .view-all-button {
+                margin-top: 1em;
+            }
+        }
+    </style>
+</body>
+</html>

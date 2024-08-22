@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+        }
+        .error-container {
+            min-height: 90vh;
+            background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/group-of-friends-having-fun-running-along-winter-b-UJBRJVB.jpg');
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .error-content {
+            text-align: center;
+            color: #F6F6F6;
+            position: relative;
+            z-index: 1;
+            padding: 2em;
+        }
+        .error-404 {
+            font-family: 'Cormorant', serif;
+            font-size: 18rem;
+            margin: 0;
+            line-height: 1;
+        }
+        h1 {
+            font-family: 'Cormorant', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 2em;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 3px solid #F6F6F6;
+            color: #F6F6F6;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            transform: translateY(-5px);
+        }
+        .button.filled {
+            background-color: #429198;
+            border-color: #429198;
+        }
+        .button.filled:hover {
+            background-color: #FA7F08;
+            border-color: #FA7F08;
+        }
+        @media (max-width: 768px) {
+            .error-404 {
+                font-size: 10rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .button-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-404">404</div>
+            <h1>We Couldn't Find The Page You Are Looking For</h1>
+            <p>Fusce non tortor tincidunt, pharetra ipsum eu, viverra leo. Vestibulum tempus sapien ac nulla dictum imperdiet. Etiam aliquet mattis magna in maximus. Aenean feugiat sed ante vitae ultrices.</p>
+            <div class="button-container">
+                <a href="/" class="button">GO TO HOME</a>
+                <a href="javascript:history.back()" class="button filled">PREVIOUS PAGE</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
