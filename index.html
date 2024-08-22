@@ -68,26 +68,29 @@
                         <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center">
                             <span class="mr-2">Play Video</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />                <svg>
+                        <path clip-rule="evenodd" />
+                    </svg>
+                </a>
             </div>
-        </section>
-        <section id="video" class="w-full bg-gray-100">
-        <h2 class="text video-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
-        <div class="w-full" style="height: 80vh;">
-            <iframe 
-                src="https://myidecide.net/XVI8RE" 
-                frameborder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen
-                class="w-full h-full" </iframe>
         </div>
-    </section><section class="evi-section py-16 min-h-screen w-full flex items-center justify-center">
+    </div>
+</section>
+<section id="video" class="w-full bg-gray-100">
+    <h2 class="text video-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
+    <div class="w-full" style="height: 80vh;">
+        <iframe 
+            src="https://myidecide.net/XVI8RE" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen
+            class="w-full h-full">
+        </iframe>
+    </div>
+</section>
+<section class="evi-section py-16 min-h-screen w-full flex items-center justify-center">
     <div class="container-custom">
-        <h2 class="text-3xl font-bold text-center mb-8 text-white shadow-text"> Click the button to speak with an agent 24 hours a day</h2>
+        <h2 class="text-3xl font-bold text-center mb-8 text-white shadow-text">Click the button to speak with an agent 24 hours a day</h2>
         <div id="app" class="max-w-sm mx-auto bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-lg shadow-lg overflow-hidden border border-gray-200 border-opacity-30">
             <div class="p-4 bg-gray-100 bg-opacity-20 border-b border-gray-200 border-opacity-30">
                 <div id="btn-container" class="flex justify-center space-x-4 mb-4">
@@ -97,7 +100,7 @@
                 <div id="heading-container" class="text-center">
                     <h3 class="text-lg font-bold mb-2 text-white">Welcome to Antares Travel Club</h3>
                     <p class="text-sm text-gray-200">
-                        Click "Start" and and you'll be connected to an agent immediately.
+                        Click "Start" and you'll be connected to an agent immediately.
                     </p>
                 </div>
             </div>
@@ -106,7 +109,7 @@
     </div>
 </section>
 
-    <script type="module" src="/src/main.ts"></script>
+<script type="module" src="/src/main.ts"></script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
         const startBtn = document.getElementById('start-btn');
@@ -122,7 +125,23 @@
             }, 100); // Adjust this delay if needed
         }, 1000); // Delay to ensure everything is loaded
     });
-</script><section id="membership-tiers" class="py-16 bg-gray-900">
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const startBtn = document.getElementById('start-btn');
+        const stopBtn = document.getElementById('stop-btn');
+
+        // Simulate clicking the start button when the page loads
+        setTimeout(() => {
+            startBtn.click();
+            
+            // Simulate clicking the stop button after a short delay
+            setTimeout(() => {
+                stopBtn.click();
+            }, 100); // Adjust this delay if needed
+        }, 1000); // Delay to ensure everything is loaded
+    });
+</script><section id="membership-tiers" class="py-16 bg-gray-900"
     <div class="container-custom">
         <h2 class="text-3xl font-bold text-center mb-12 text-white">Membership Tiers</h2>
         <div class="membership-tiers grid grid-cols-1 md:grid-cols-3 gap-8">
