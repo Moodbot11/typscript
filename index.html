@@ -139,16 +139,19 @@
             </div>
         </section>
 
-    <<script>
-      document.addEventListener('DOMContentLoaded', (event) => {
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const startBtn = document.getElementById('start-btn');
+        
+        // Only simulate clicking the start button when the page loads
         setTimeout(() => {
-          const startBtn = document.getElementById('start-btn');
-          if (startBtn) {
-            startBtn.click();
-            console.log('Evi automatically activated');
-          }
-        }, 2000);
-      });
+            if (startBtn && !startBtn.disabled) {
+                startBtn.click();
+                console.log('Evi automatically activated');
+            }
+        }, 2000); // Increased delay to ensure everything is loaded
+    });
+</script>
     </script>
     </script>
         <section class="py-16 bg-gray-100">
