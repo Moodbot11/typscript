@@ -418,3 +418,36 @@ class ChatCard {
     return card;
   }
 }
+// Add these lines at the end of your src/main.ts file
+
+declare global {
+  interface Window {
+    isListening: boolean;
+  }
+}
+
+window.isListening = false;
+
+// Update these in your existing handleStart and handleStop functions
+const originalHandleStart = handleStart;
+handleStart = () => {
+  originalHandleStart();
+  window.isListening = true;
+};
+
+const originalHandleStop = handleStop;
+handleStop = () => {
+  originalHandleStop();
+  window.isListening = false;
+};
+
+// Optional: Periodically check if Evi needs to be reactivated
+setInterval(() => {
+  if (!window.isListening) {
+    const startBtn = document.getElementById('start-btn') as HTMLButtonElement;
+    if (startBtn) {
+      startBtn.click();
+      console.log('Evi reactivated');
+    }
+  }
+}, 5000); // Check every 5 seconds
