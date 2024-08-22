@@ -103,7 +103,31 @@
             effect: 'fade',
         });
     </script>
-        <section id="video" class="w-full bg-gray-100 py-16">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            effect: 'fade',
+        });
+
+        // Function to activate the bot
+        function activateBot() {
+            const startBtn = document.getElementById('start-btn');
+            if (startBtn) {
+                startBtn.click();
+                console.log('Bot activated');
+            }
+        }
+
+        // Activate bot after a short delay to ensure Swiper is initialized
+        setTimeout(activateBot, 500);
+    });
+</script>
+<section id="video" class="w-full bg-gray-100 py-16">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center mb-8">Experience Luxury Travel</h2>
                 <div class="relative w-full" style="padding-bottom: 56.25%;">
