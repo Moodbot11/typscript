@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Cormorant:wght@600&display=swap" rel="stylesheet">
      <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </header>
          <main>
@@ -17,10 +17,11 @@
     <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg'); background-size: cover; background-position: center;"></div>
     <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg'); background-size: cover; background-position: center;"></div>
 <script>
-    function simpleCarousel() {
-        const slides = document.querySelectorAll('#simple-carousel > div');
-        let currentSlide = 0;
-
+<div id="simple-carousel" class="relative h-screen overflow-hidden">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+</div>
         setInterval(() => {
             slides[currentSlide].classList.add('opacity-0');
             currentSlide = (currentSlide + 1) % slides.length;
@@ -31,33 +32,7 @@
     // Run the carousel without an event listener
     simpleCarousel();
 </script>       
-        <section class="relative h-screen">
-            <div class="swiper-container h-full">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
-                </div>
-            </div>
-            testDatabaseConnection();
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="absolute inset-0 flex items-center">
-                <div class="container mx-auto px-4">
-                    <h3 class="text-white text-xl mb-4">Beach Club & Resort</h3>
-                    <h1 class="text-white text-4xl md:text-6xl font-serif mb-6">Get to The Beach and Have Fun!</h1>
-                    <p class="text-white max-w-xl mb-8">Experience the ultimate beach getaway at our luxurious resort. Relax, unwind, and create unforgettable memories.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">BOOK NOW</a>
-                        <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center">
-                            <span class="mr-2">Play Video</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
         <section id="video" class="w-full bg-gray-100">
         <h2 class="text video-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
         <div class="w-full" style="height: 80vh;">
