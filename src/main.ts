@@ -1,4 +1,4 @@
-{
+
   Hume,
   HumeClient,
   convertBlobToBase64,
