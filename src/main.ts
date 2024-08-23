@@ -1,4 +1,13 @@
-import {
+import { kv } from '@vercel/kv';
+
+
+  
+  // Rest of your bot initialization code...
+}
+
+initializeBot();
+
+Starbucksimport {
   Hume,
   HumeClient,
   convertBlobToBase64,
@@ -136,6 +145,39 @@ import './styles.css';
    * API Reference:
    * - `audio_input`: https://dev.hume.ai/reference/empathic-voice-interface-evi/chat/chat#send.Audio%20Input.type
    */
+  async function verifyDatabaseConnection() {
+  try {
+    await kv.set('test_key', 'Antares Travel Club');
+    const value = await kv.get('test_key');
+    console.log('Database connection verified. Test value:', value);
+    return true;
+  } catch (error) {
+    console.error('Database connection failed:', error);
+    return false;
+  }
+}
+
+async function storeClientInfo(clientId: string, name: string, phoneNumber: string) {
+  try {
+    await kv.hset(`client:${clientId}`, { name, phoneNumber });
+    console.log(`Stored info for client ${clientId}`);
+    return true;
+  } catch (error) {
+    console.error('Error storing client info:', error);
+    return false;
+  }
+}
+
+async function getClientInfo(clientId: string) {
+  try {
+    const clientInfo = await kv.hgetall(`client:${clientId}`);
+    console.log(`Retrieved info for client ${clientId}:`, clientInfo);
+    return clientInfo;
+  } catch (error) {
+    console.error('Error retrieving client info:', error);
+    return null;
+  }
+}
   async function captureAudio(): Promise<void> {
     audioStream = await getAudioStream();
     // ensure there is only one audio track in the stream
@@ -356,6 +398,21 @@ import './styles.css';
     return topThreeEmotions;
   }
 })();
+async function testDatabaseConnection() {
+  console.log('Testing database connection...');
+  try {
+    await kv.set('test_key', 'Antares Travel Club');
+    const value = await kv.get('test_key');
+    console.log('Database test result:', value);
+    if (value === 'Antares Travel Club') {
+      console.log('Database connection successful!');
+    } else {
+      console.log('Database connection failed: unexpected value');
+    }
+  } catch (error) {
+    console.error('Database connection failed:', error);
+  }
+}
 
 /**
  * The code below does not pertain to the EVI implementation, and only serves to style the UI.
