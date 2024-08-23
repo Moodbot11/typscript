@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antares Travel Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Besort - Beach Club & Resort</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Cormorant:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -25,55 +28,28 @@
                 }
             }
         }
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</head>
-<body class="font-sans">
-    <header class="absolute top-0 left-0 right-0 z-50">
-        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold">Besort</a>
-            <ul class="hidden md:flex space-x-6 text-white">
-                <li><a href="#" class="hover:text-accent">Home</a></li>
-                <li><a href="#" class="hover:text-accent">About</a></li>
-                <li><a href="#" class="hover:text-accent">Services</a></li>
-                <li><a href="#" class="hover:text-accent">Contact</a></li>
-            </ul>
-            <button class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </nav>
-    </header>
-    <main>
-        <section class="relative h-screen">
-            <div class="swiper-container h-full">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
-                </div>
-            </div>
-            testDatabaseConnection();
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="absolute inset-0 flex items-center">
-                <div class="container mx-auto px-4">
-                    <h3 class="text-white text-xl mb-4">Beach Club & Resort</h3>
-                    <h1 class="text-white text-4xl md:text-6xl font-serif mb-6">Get to The Beach and Have Fun!</h1>
-                    <p class="text-white max-w-xl mb-8">Experience the ultimate beach getaway at our luxurious resort. Relax, unwind, and create unforgettable memories.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">BOOK NOW</a>
-                        <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center">
-                            <span class="mr-2">Play Video</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
+       <div id="simple-carousel" class="relative h-screen overflow-hidden">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+</div>
+
+<script>
+    var images = document.querySelectorAll('#simple-carousel img');
+    var currentIndex = 0;
+
+    function changeImage() {
+        images[currentIndex].style.opacity = '0';
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].style.opacity = '1';
+    }
+
+    setInterval(changeImage, 5000); // Change image every 5 seconds
+</script> 
+
+
+
         <section id="video" class="w-full bg-gray-100">
         <h2 class="text video-3xl font-bold text-center py-8">Experience Luxury Travel</h2>
         <div class="w-full" style="height: 80vh;">
@@ -83,7 +59,7 @@
                 allow="autoplay; fullscreen; picture-in-picture" 
                 allowfullscreen
                 class="w-full h-full"
-            </iframe>
+            ></iframe>
         </div>
     </section>
 <section class="evi-section py-16 min-h-screen w-full flex items-center justify-center">
@@ -94,8 +70,52 @@
                 <div id="btn-container" class="flex justify-center space-x-4 mb-4">
                     <button id="start-btn" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300">Start</button>
                     <button id="stop-btn" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300" disabled>Stop</button>
-             </div>
-           </section>
+                </div>
+                <div id="heading-container" class="text-center">
+                    <h3 class="text-lg font-bold mb-2 text-white">Welcome to Antares Travel Club</h3>
+                    <p class="text-sm text-gray-200">
+                        Click "Start" and and you'll be connected to an agent immediately.
+                    </p>
+                </div>
+            </div>
+            <div id="chat" class="bg-white bg-opacity-10 p-4 h-40 overflow-y-auto"></div>
+        </div>
+    </div>
+</section>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6">
+                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ2.png" alt="Best Beach Club" class="w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Best Beach Club</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ1.png" alt="Best Resort" class="w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Best Resort</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ.png" alt="Best Services" class="w-16 h-16 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2">Best Services</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            effect: 'fade',
+        });
+    </script>
+<!-- Continue from the previous HTML -->
+
         <section class="py-16 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
@@ -156,9 +176,8 @@
                 </div>
             </div>
         </section>
-    
 
-            <section class="py-16 bg-white">
+        <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
@@ -405,7 +424,7 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
                         <ul class="space-y-2">
-                            <li>123 Beach Road, Tropical Island</li>
+                            <li>123 Beach Road, TOf course fucking crazy fuck youropical Island</li>
                             <li>Phone: +1 (234) 567-8901</li>
                             <li>Email: info@besort.com</li>
                         </ul>
