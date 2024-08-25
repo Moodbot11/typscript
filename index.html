@@ -1,121 +1,37 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antares Travel Club - Exclusive Luxury Beach Experiences</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Cormorant:wght@600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#429198',
-                        secondary: '#F6F6F6',
-                        accent: '#FA7F08',
-                    },
-                    fontFamily: {
-                        sans: ['Raleway', 'sans-serif'],
-                        serif: ['Cormorant', 'serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-</head>
-<body class="font-sans">
-    <header class="absolute top-0 left-0 right-0 z-50">
-        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold">Antares Travel Club</a>
-            <ul class="hidden md:flex space-x-6 text-white">
-                <li><a href="#" class="hover:text-accent">Exclusive Destinations</a></li>
-                <li><a href="#" class="hover:text-accent">Luxury Experiences</a></li>
-                <li><a href="#" class="hover:text-accent">Elite Membership</a></li>
-                <li><a href="#" class="hover:text-accent">Concierge Services</a></li>
-                <li><a href="#" class="hover:text-accent">Contact Us</a></li>
-            </ul>
-            <button class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </nav>
-    </header>
+import { Button } from '../components/ui/Button'
+import React from 'react'
 
-    <main>
-        <section class="relative h-screen">
-            <div class="swiper-container h-full">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-            <div class="absolute inset-0 flex items-center">
-                <div class="container mx-auto px-4">
-                    <h3 class="text-white text-xl mb-4">Welcome to Antares Travel Club</h3>
-                    <h1 class="text-white text-4xl md:text-6xl font-serif mb-6">Unparalleled Luxury Beach Experiences</h1>
-                    <p class="text-white max-w-xl mb-8">Embark on a journey of opulence and exclusivity with Antares Travel Club. Discover pristine beaches, indulge in world-class amenities, and create lifelong memories in the most coveted coastal destinations around the globe.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">UNLOCK ELITE MEMBERSHIP</a>
-                        <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center" id="playVideo">
-                            <span class="mr-2">Experience Antares</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-4 rounded-lg">
-            <iframe width="560" height="315" src="https://myidecide.net/XVI8RE" title="Antares Travel Club: A World of Luxury" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button id="closeVideo" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300">Close Preview</button>
+export default function AboutAntares() {
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="lg:w-1/2 lg:pr-12">
+            <h2 className="text-orange-500 text-xl font-semibold mb-4">About Antares Travel Club</h2>
+            <h3 className="text-4xl font-bold mb-6">Your Gateway to Exclusive Beach Getaways</h3>
+            <p className="text-gray-600 mb-6">
+              Antares Travel Club is your passport to the world's most stunning beaches and luxurious resorts. We've curated a collection of pristine coastal destinations that offer not just a vacation, but an experience of a lifetime. From secluded tropical paradises to vibrant beach communities, our club opens doors to exclusive retreats around the globe.
+            </p>
+            <p className="text-gray-600 mb-8">
+              As a member of Antares Travel Club, you'll enjoy priority access to our partner resorts, personalized travel planning, and unique experiences tailored to your preferences. Whether you're seeking a romantic getaway, a family adventure, or a solo retreat, our team of travel experts is dedicated to crafting the perfect beach escape for you.
+            </p>
+            <Button className="bg-teal-500 text-white hover:bg-teal-600">
+              LEARN MORE
+            </Button>
+          </div>
+          <div className="lg:w-1/2 mt-8 lg:mt-0">
+            <img 
+              src="/images/about-antares.jpg" 
+              alt="Luxurious beach resort" 
+              className="rounded-lg shadow-lg"
+            />
+          </div>
         </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.swiper-container', {
-                loo put it back together if you don't give it back to me the way it gave it to you stupid fuckerp: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 5000,
-                },
-            });
-
-            const videoModal = document.getElementById('videoModal');
-            const playVideo = document.getElementById('playVideo');
-            const closeVideo = document.getElementById('closeVideo');
-
-            playVideo.addEventListener('click', function(e) {
-                e.preventDefault();
-                videoModal.classList.remove('hidden');
-            });
-
-            closeVideo.addEventListener('click', function() {
-                videoModal.classList.add('hidden');
-            });
-        });
-    </script>
+      </div>
+    </section>
+  )
+}
          <section class="py-16 bg-white">
           <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
