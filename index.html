@@ -114,6 +114,45 @@
             });
         });
     </script>
+
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-4 rounded-lg">
+            <iframe width="560" height="315" src="https://myidecide.net/XVI8RE" title="Resort Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button id="closeVideo" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                },
+            });
+
+            const videoModal = document.getElementById('videoModal');
+            const playVideo = document.getElementById('playVideo');
+            const closeVideo = document.getElementById('closeVideo');
+
+            playVideo.addEventListener('click', function(e) {
+                e.preventDefault();
+                videoModal.classList.remove('hidden');
+            });
+
+            closeVideo.addEventListener('click', function() {
+                videoModal.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
 
