@@ -1,295 +1,122 @@
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antares Travel Club - Luxury Beach Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Cormorant:wght@600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#429198',
+                        secondary: '#F6F6F6',
+                        accent: '#FA7F08',
+                    },
+                    fontFamily: {
+                        sans: ['Raleway', 'sans-serif'],
+                        serif: ['Cormorant', 'serif'],
+                    },
+                }
+            }
+        }
     </script>
-         <section class="py-16 bg-white">
-          <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center p-6">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ2.png" alt="Best Beach Club" class="w-16 h-16 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Best Beach Club</h3>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ1.png" alt="Best Resort" class="w-16 h-16 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Best Resort</h3>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beachbar-icons-and-logo-set-BYM8CQ.png" alt="Best Services" class="w-16 h-16 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold mb-2">Best Services</h3>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut elit tellus, luctus nec</p>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="font-sans">
+    <header class="absolute top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Antares Travel Club</a>
+            <ul class="hidden md:flex space-x-6 text-white">
+                <li><a href="#" class="hover:text-accent">Home</a></li>
+                <li><a href="#" class="hover:text-accent">About</a></li>
+                <li><a href="#" class="hover:text-accent">Services</a></li>
+                <li><a href="#" class="hover:text-accent">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-screen">
+            <div class="swiper-container h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+            <div class="absolute inset-0 flex items-center z-20">
+                <div class="container mx-auto px-4">
+                    <h3 class="text-white text-xl mb-4 font-light">Beach Club & Resort</h3>
+                    <h1 class="text-white text-4xl md:text-6xl font-serif mb-6">Get to The Beach and Have Fun!</h1>
+                    <p class="text-white max-w-xl mb-8">Experience the ultimate beach getaway at our luxurious resort. Relax, unwind, and create unforgettable memories in paradise.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">BOOK NOW</a>
+                        <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center" id="playVideo">
+                            <span class="mr-2">Play Video</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <section class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/woman-on-the-beach-in-the-palm-trees-shadow-wearin-JR9VMGL.jpg" alt="About Besort" class="rounded-lg shadow-lg">
-                    </div>.
-                          .
-                          .
-                          .
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/woman-on-the-beach-in-the-palm-trees-shadow-wearin-JR9VMGL.jpg" alt="About Besort" class="rounded-lg shadow-lg">                      
-                                                       
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-4 rounded-lg">
+            <iframe width="560" height="315" src="https://myidecide.net/XVI8RE" title="Resort Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button id="closeVideo" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300">Close</button>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                },
+            });
 
-                                          
-                    <div class="w-full lg:w-1/2 lg:pl-8">
-                        <h3 class="text-primary text-xl mb-2">About Besort</h3>
-                        <h2 class="text-3xl font-serif mb-4">Besort is Beach Club & Resort With Beautiful Beaches</h2>
-                        <p class="text-gray-600 mb-6">About Besort ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit, a scelerisque purus. Proin sollicitudin suscipit scelerisque. Nulla vel sapien viverra, varius augue lobortis, lobortis enim.</p>
-                        <p class="text-gray-600 mb-6">Besort is ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit, a scelerisque purus. Proin sollicitudin suscipit scelerisque. Nulla vel sapien viverra, varius augue lobortis, lobortis enim. Cras cursus turpis lectus, quis rhoncus tellus placerat nec. Nullam elit mauris.</p>
-                        <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">ABOUT US</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            const videoModal = document.getElementById('videoModal');
+            const playVideo = document.getElementById('playVideo');
+            const closeVideo = document.getElementById('closeVideo');
 
-        <section class="py-16 bg-primary text-white">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <i class="fas fa-utensils text-4xl mb-4"></i>
-                        <h3 class="text-3xl font-bold mb-2">120+</h3>
-                        <p>Available Menus</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-award text-4xl mb-4"></i>
-                        <h3 class="text-3xl font-bold mb-2">98%</h3>
-                        <p>Positive Reviews</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-users text-4xl mb-4"></i>
-                        <h3 class="text-3xl font-bold mb-2">39+</h3>
-                        <p>Professional Staff</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-home text-4xl mb-4"></i>
-                        <h3 class="text-3xl font-bold mb-2">79+</h3>
-                        <p>Room Available</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            playVideo.addEventListener('click', function(e) {
+                e.preventDefault();
+                videoModal.classList.remove('hidden');
+            });
 
-        <section class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <h3 class="text-primary text-xl text-center mb-2">Take a Look Our Gallery</h3>
-                <h2 class="text-3xl font-serif text-center mb-8">Check Out The Luxury at Our Resort & Beach Club</h2>
-                <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Our Gallery dolor sit amet consectetur adipiscing elit cras in auctor elit a scelerisqu</p>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/attractive-young-woman-in-blue-swimsuit-with-open-BKJK7AN.jpg" alt="Gallery 1" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-friends-toasting-at-the-beach-7ASJZA2.jpg" alt="Gallery 2" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/loving-couple-drinking-cocktails-in-hotel-CPXU4RU.jpg" alt="Gallery 3" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/honeymooners-in-a-swimming-pool-at-a-resort-WNHTEDL.jpg" alt="Gallery 4" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beautiful-and-elegant-girl-on-a-resort-PGLKJ9U.jpg" alt="Gallery 5" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/two-elegant-girls-on-a-resort-VSNW7AV.jpg" alt="Gallery 6" class="w-full h-64 object-cover rounded-lg">
-                    <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/woman-on-the-beach-touching-palm-tree-leaf-shadow-MWPAZXL.jpg" alt="Gallery 7" class="w-full h-64 object-cover rounded-lg">
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/smart-nerdy-girl-discussing-new-inventions-portrai-9AWR967.jpg" alt="Testimonial" class="rounded-full w-32 h-32 object-cover mx-auto mb-4">
-                        <blockquote class="text-center text-gray-600 max-w-xl mx-auto">
-                            <p class="mb-4">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullamcorper ante, quis faucibus sapien. Maecenas ut tortor ac enim aliquam venenatis. Vestibulum ullamcorper, metus luctus malesuada aliquam, mauris magna auctor nibh, et maximus enim est in eros. Proin ac nibh ac nibh convallis auctor quis ut arcu. Cras sagittis suscipit velit, eu gravida nisi congue at. Pellentesque quis sollicitudin est, ut aliquet justo. Phasellus maximus sagittis egestas.</p>
-                            <footer>
-                                <cite class="font-bold text-primary">John Doe</cite>
-                                <p class="text-sm">Designer</p>
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="w-full lg:w-1/2">
-                        <h3 class="text-primary text-xl mb-2">Besort Activities</h3>
-                        <h2 class="text-3xl font-serif mb-6">Conquer The Sea With Our Beach Parties</h2>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/leisure-travel-luxury-outdoor-area-by-the-pool-WFNZCQS.jpg" alt="Pool Besort" class="w-full h-48 object-cover rounded-lg mb-4">
-                                <h3 class="text-xl font-semibold mb-2">Pool Besort</h3>
-                                <p class="text-gray-600">A small river named Duden flows by their place and supplies it with the necessary</p>
-                            </div>
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/straw-houses-on-a-sandy-beach-with-tropical-flora-PBFW4T2.jpg" alt="Besort Beach" class="w-full h-48 object-cover rounded-lg mb-4">
-                                <h3 class="text-xl font-semibold mb-2">Besort Beach</h3>
-                                <p class="text-gray-600">A small river named Duden flows by their place and supplies it with the necessary</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-16 bg-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center">
-                    <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                        <img src="http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/white-lounge-chairs-on-a-beautiful-tropical-beach-M9YC2LR.jpg" alt="Seaside Lounge" class="rounded-lg shadow-lg mb-6">
-                        <h3 class="text-2xl font-semibold mb-2">Seaside Lounge</h3>
-                        <div class="flex justify-between mb-4">
-                            <span>Full Capacity: 1-5</span>
-                            <span>Price: $129 / hr</span>
-                        </div>
-                        <ul class="list-disc list-inside text-gray-600 mb-6">
-                            <li>Vonsectetur Adipiscing</li>
-                            <li>Malesuada Aliquam</li>
-                            <li>Vonsectetur Adipiscing</li>
-                        </ul>
-                    </div>
-                    <div class="w-full lg:w-1/2 lg:pl-16">
-                        <h3 class="text-primary text-xl mb-2">Our Tables</h3>
-                        <h2 class="text-3xl font-serif mb-6">Located Close to The Sea & Beautiful Scenery</h2>
-                        <p class="text-gray-600 mb-6">Our tables ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit, a scelerisque purus. Proin sollicitudin suscipit scelerisque. Nulla vel sapien viverra, varius augue lobortis, lobortis enim.</p>
-                        <p class="text-gray-600 mb-6">Besort is ipsum dolor sit amet, consectetur adipiscing elit. Cras in auctor elit, a scelerisque purus. Proin sollicitudin suscipit scelerisque. Nulla vel sapien viverra, varius augue lobortis, lobortis enim. Cras cursus turpis lectus, quis rhoncus tellus placerat nec. Nullam elit mauris.</p>
-                        <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">VIEW ALL TABLE</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h3 class="text-primary text-xl text-center mb-2">Our Menus</h3>
-                <h2 class="text-3xl font-serif text-center mb-8">Enjoy With The Favorite Foods & Drinks at Besort Bar</h2>
-                <p class="text-gray-600 text-center mb-12">Our menus dolor sit amet consectetur adipiscing elit cras in auctor elit a scelerisqu</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-center">Foods</h3>
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Traditional Burger</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$26</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Jersey Burger</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$28</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Crispy Chicken Sandwich</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$28</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-center">Snack</h3>
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Mozarella Moon</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$16</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Wings Boneless</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$21</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Nachos</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$18</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6 text-center">Drink</h3>
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Frozen Margarita</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$18</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Espresso Martini</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$20</span>
-                            </div>
-                            <div class="flex justify-between items-center border-b border-gray-200 pb-2">
-                                <div>
-                                    <h4 class="font-semibold">Aperol Spritz</h4>
-                                    <p class="text-sm text-gray-600">Aliquam fringilla diam et sapien iaculis, at sollicitudin mi iaculis. Donec ac ullam.</p>
-                                </div>
-                                <span class="text-xl font-semibold">$17</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-cover bg-center py-24" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-resort-with-sunbeds-EH4RVAH.jpg');">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-primary text-xl mb-2">Best Performance</h3>
-                        <h2 class="text-3xl font-serif mb-4">Acoustic With Fourtwnty</h2>
-                        <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                        <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">Book Now</a>
-                    </div>
-                    <div class="text-white">
-                        <h3 class="text-xl mb-2">Best Performance</h3>
-                        <h2 class="text-3xl font-serif mb-4">Never Ending Summer</h2>
-                        <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                        <a href="#" class="inline-block bg-white text-primary px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">Learn More</a>
-                    </div>
-                    <div class="text-white">
-                        <h3 class="text-xl mb-2">Best Performance</h3>
-                        <h2 class="text-3xl font-serif mb-4">Relax & Lounge</h2>
-                        <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                        <a href="#" class="inline-block bg-white text-primary px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h3 class="text-primary text-xl text-center mb-2">Our Blog</h3>
-                <h2 class="text-3xl font-serif text-center mb-12">Check Our Latest News</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/800x600/?beach" alt="Blog post 1" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Enjoying the Sunset at Besort</h3>
-                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                            <a href="#" class="text-primary hover:underline">Read More</a>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/800x600/?resort" alt="Blog post 2" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Top 5 Activities at Besort</h3>
-                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                            <a href="#" class="text-primary hover:underline">Read More</a>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://source.unsplash.com/random/800x600/?cocktail" alt="Blog post 3" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">Cocktail of the Month: Ocean Breeze</h3>
-                            <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                            <a href="#" class="text-primary hover:underline">Read More</a>
+            closeVideo.addEventListener('click', function() {
+                videoModal.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>>Read More</a>
                         </div>
                     </div>
                 </div>
