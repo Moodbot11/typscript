@@ -25,6 +25,12 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="font-sans">
     <header class="absolute top-0 left-0 right-0 z-50">
@@ -48,9 +54,9 @@
         <section class="relative h-screen">
             <div class="swiper-container h-full">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
-                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/beach-party-dj-set-K9SHFY4.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-cheering-with-cocktails-at-5V9ZUL7.jpg');"></div>
+                    <div class="swiper-slide" style="background-image: url('http://kfkit.rometheme.pro/besort/wp-content/uploads/sites/40/2022/11/happy-girls-having-fun-drinking-cocktails-at-bar-o-9ZJAQLJ.jpg');"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -114,78 +120,6 @@
             });
         });
     </script>
-
-    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-4 rounded-lg">
-            <iframe width="560" height="315" src="https://myidecide.net/XVI8RE" title="Resort Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <button id="closeVideo" class="mt-4 bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300">Close</button>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.swiper-container', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 5000,
-                },
-            });
-
-            const videoModal = document.getElementById('videoModal');
-            const playVideo = document.getElementById('playVideo');
-            const closeVideo = document.getElementById('closeVideo');
-
-            playVideo.addEventListener('click', function(e) {
-                e.preventDefault();
-                videoModal.classList.remove('hidden');
-            });
-
-            closeVideo.addEventListener('click', function() {
-                videoModal.classList.add('hidden');
-            });
-        });
-    </script>
-</body>
-</html>
-
-export default function AboutAntares() {
-  return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 lg:pr-12">
-            <h2 className="text-orange-500 text-xl font-semibold mb-4">About Antares Travel Club</h2>
-            <h3 className="text-4xl font-bold mb-6">Your Gateway to Exclusive Beach Getaways</h3>
-            <p className="text-gray-600 mb-6">
-              Antares Travel Club is your passport to the world's most stunning beaches and luxurious resorts. We've curated a collection of pristine coastal destinations that offer not just a vacation, but an experience of a lifetime. From secluded tropical paradises to vibrant beach communities, our club opens doors to exclusive retreats around the globe.
-            </p>
-            <p className="text-gray-600 mb-8">
-              As a member of Antares Travel Club, you'll enjoy priority access to our partner resorts, personalized travel planning, and unique experiences tailored to your preferences. Whether you're seeking a romantic getaway, a family adventure, or a solo retreat, our team of travel experts is dedicated to crafting the perfect beach escape for you.
-            </p>
-            <Button className="bg-teal-500 text-white hover:bg-teal-600">
-              LEARN MORE
-            </Button>
-          </div>
-          <div className="lg:w-1/2 mt-8 lg:mt-0">
-            <img 
-              src="/images/about-antares.jpg" 
-              alt="Luxurious beach resort" 
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
          <section class="py-16 bg-white">
           <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
