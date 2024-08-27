@@ -163,39 +163,41 @@
       </div>
       <div id="chat"></div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Swiper('.swiper-container', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 5000,
-                },
-                effect: 'fade',
-            });
-
-            const videoModal = document.getElementById('videoModal');
-            const playVideo = document.getElementById('playVideo');
-            const closeVideo = document.getElementById('closeVideo');
-
-            playVideo.addEventListener('click', function(e) {
-                e.preventDefault();
-                videoModal.classList.remove('hidden');
-            });
-
-            closeVideo.addEventListener('click', function() {
-                videoModal.classList.add('hidden');
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
         });
-    </script>
+
+        const videoModal = document.getElementById('videoModal');
+        const playVideo = document.getElementById('playVideo');
+        const closeVideo = document.getElementById('closeVideo');
+
+        playVideo.addEventListener('click', function(e) {
+            e.preventDefault();
+            videoModal.classList.remove('hidden');
+        });
+
+        closeVideo.addEventListener('click', function() {
+            videoModal.classList.add('hidden');
+        });
+    });
+</script>
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
