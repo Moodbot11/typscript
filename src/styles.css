@@ -207,20 +207,20 @@ button:disabled {
     scrollbar-color: #4a5568 #2d3748;
 }
 
-//#chat::-webkit-scrollbar {
+  #chat::-webkit-scrollbar {
   width: 4px;
-//}
+  }
 
-//#chat::-webkit-scrollbar-track {
-//  background: #2d3748;
-//}
+  #chat::-webkit-scrollbar-track {
+  background: #2d3748;
+  }
 
-//#chat::-webkit-scrollbar-thumb {
-//  background-color: #4a5568;
-//  border-radius: 20px;
-//}
+  #chat::-webkit-scrollbar-thumb {
+   background-color: #4a5568;
+  border-radius: 20px;
+}
 
-//.chat-card {
+  .chat-card {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -230,36 +230,36 @@ button:disabled {
   color: #e2e8f0;
 }
 
-//.chat-card.user {
+  .chat-card.user {
   background-color: rgba(66, 153, 225, 0.2);
 }
 
-//.chat-card.assistant {
+  .chat-card.assistant {
   background-color: rgba(72, 187, 120, 0.2);
 }
 
-//.chat-card .role {
+  .chat-card .role {
   font-weight: bold;
   margin-bottom: 0.25rem;
   color: #ffffff;
 }
 
-//.chat-card .timestamp {
+  .chat-card .timestamp {
   font-size: 0.65rem;
   color: #a0aec0;
   margin-bottom: 0.25rem;
 }
 
-//.chat-card .content {
+  .chat-card .content {
   margin-bottom: 0.25rem;
 }
 
-//.chat-card .scores {
+  .chat-card .scores {
   font-size: 0.65rem;
   color: #a0aec0;
 }
 
-//.score-item {
+  .score-item {
   display: inline-block;
   margin-right: 0.5rem;
 }
