@@ -29,16 +29,16 @@
     </script>
 </head>
 <body class="font-sans">
-    <header class="bg-secondary text-white">
+    <header class="absolute top-0 left-0 right-0 z-50">
         <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold">AI Bot Solutions</a>
-            <ul class="hidden md:flex space-x-6">
+            <a href="#" class="text-white text-2xl font-bold">AI Bot Solutions</a>
+            <ul class="hidden md:flex space-x-6 text-white">
                 <li><a href="#" class="hover:text-accent">Home</a></li>
                 <li><a href="#" class="hover:text-accent">Features</a></li>
                 <li><a href="#" class="hover:text-accent">Pricing</a></li>
                 <li><a href="#" class="hover:text-accent">Contact</a></li>
             </ul>
-            <button class="md:hidden">
+            <button class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -47,29 +47,44 @@
     </header>
 
     <main>
-        <section class="bg-primary text-white py-20">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-6xl font-display mb-6">AI Bots with Emotions</h1>
-                <p class="text-xl mb-8 max-w-2xl">Experience the future of customer service with our AI bots that understand and respond to human emotions. Boost your CRM and phone room efficiency today!</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-accent text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">Get Started</a>
-                    <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center" id="playVideo">
-                        <span class="mr-2">Watch Demo</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
+        <section class="relative h-screen">
+            <div class="swiper-container h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            <div class="absolute inset-0 flex items-center z-20">
+                <div class="container mx-auto px-4">
+                    <h3 class="text-white text-xl mb-4 font-light">Next-Gen Customer Engagement</h3>
+                    <h1 class="text-white text-4xl md:text-6xl font-display mb-6">AI Bots with Emotions</h1>
+                    <p class="text-white max-w-xl mb-8">Experience the future of customer service with our AI bots that understand and respond to human emotions. Boost your CRM and phone room efficiency today!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-primary text-white px-6 py-3 rounded hover:bg-opacity-90 transition duration-300">Get Started</a>
+                        <a href="#" class="border border-white text-white px-6 py-3 rounded hover:bg-white hover:text-primary transition duration-300 flex items-center" id="playVideo">
+                            <span class="mr-2">Watch Demo</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16">
+        <section class="py-16 bg-primary text-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
                         <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" alt="AI Bot" class="mx-auto rounded-lg shadow-lg">
                     </div>
                     <div class="w-full lg:w-1/2 lg:pl-16">
+                        <h3 class="text-xl mb-2">Revolutionary Technology</h3>
                         <h2 class="text-3xl font-display mb-6">Emotional AI for Enhanced Customer Experience</h2>
                         <p class="mb-6">Our AI bots are equipped with advanced emotional intelligence, allowing them to understand and respond to customer sentiments. This leads to more meaningful interactions, higher customer satisfaction, and improved conversion rates.</p>
                         <ul class="space-y-2">
@@ -152,6 +167,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 5000,
+                },
+                effect: 'fade',
+            });
+
             const videoModal = document.getElementById('videoModal');
             const playVideo = document.getElementById('playVideo');
             const closeVideo = document.getElementById('closeVideo');
