@@ -112,21 +112,6 @@ button:disabled {
     background: linear-gradient(135deg, #434343 0%, #000000 100%);
     position: relative;
     overflow: hidden;
-}
-#app {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
-
-
-
-
-
-
-
-
 
 .evi-section::before {
     content: '';
@@ -145,14 +130,7 @@ button:disabled {
 
 .shadow-text {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-#app {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-}
+} who Christ
 
 #chat {
     background: rgba(255, 255, 255, 0.05);
@@ -517,16 +495,6 @@ footer .fab {
 }
 
 /* Bot styles */
-#app {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
 
 #chat {
     height: 300px;
