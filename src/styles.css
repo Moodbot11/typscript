@@ -56,7 +56,8 @@ button:disabled {
   z-index: 20;
 }
 
-/* Adjust the overlay to cover the entire hero section */
+/* Remove or comment out the hero-overlay class */
+/* 
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -66,29 +67,42 @@ button:disabled {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
+*/
+
+/* Add these styles for the Swiper container and slides */
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adjust the #app styles */
 #app {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  width: 72%;
-  min-width: 900px;
+  width: 300px; /* Adjusted for better positioning */
   padding: 24px;
   margin: 0px;
   overflow: hidden;
   
-  /* New transparent styles */
+  /* Transparent styles */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   
-  /* Additional styles to ensure proper positioning */
+  /* Positioning */
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1000;
 }
-
 #btn-container {
   display: flex;
   justify-content: flex-end;
