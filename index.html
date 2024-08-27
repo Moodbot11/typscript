@@ -184,38 +184,50 @@
                 centeredSlides: true,
             });
 
-            const videoModal = document.getElementById('videoModal');
-            const playVideo = document.getElementById('playVideo');
-            const closeVideo = document.getElementById('closeVideo');
 
-            playVideo.addEventListener('click', function(e) {
-                e.preventDefault();
-                videoModal.classList.remove('hidden');
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    // Video modal controls
+    const videoModal = document.getElementById('video-modal');
+    const playVideo = document.getElementById('play-video');
+    const closeVideo = document.getElementById('close-video');
 
-            closeVideo.addEventListener('click', function() {
-                videoModal.classList.add('hidden');
-            });
-
-            // Bot button event listeners
-            const startButton = document.getElementById('start-btn');
-            const stopButton = document.getElementById('stop-btn');
-
-            startButton.addEventListener('click', function() {
-                console.log("Bot started");
-                startButton.disabled = true;
-                stopButton.disabled = false;
-                document.getElementById('chat').innerHTML = "<p>Welcome to AI Bot Solutions!</p>";
-            });
-
-              stopButton.addEventListener('click', function() {
-                console.log("Bot stopped");
-                startButton.disabled = false;
-                stopButton.disabled = true;
-            });
-
+    if (playVideo && closeVideo && videoModal) {
+        playVideo.addEventListener('click', function(e) {
+            e.preventDefault();
+            videoModal.classList.remove('hidden');
         });
-    </script>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-</body>
-</html>
+
+        closeVideo.addEventListener('click', function() {
+            videoModal.classList.add('hidden');
+        });
+    }
+
+    // Bot button controls
+    const startButton = document.getElementById('start-btn');
+    const stopButton = document.getElementById('stop-btn');
+    const chatBox = document.getElementById('chat');
+
+    if (startButton && stopButton && chatBox) {
+        startButton.addEventListener('click', function() {
+            console.log("Bot started");
+            startButton.disabled = true;
+            stopButton.disabled = false;
+            chatBox.innerHTML = "<p>Welcome to AI Bot Solutions!</p>";
+        });
+
+        stopButton.addEventListener('click', function() {
+            console.log("Bot stopped");
+            startButton.disabled = false;
+            stopButton.disabled = true;
+        });
+    }
+
+    // Slider controls
+    const sliders = document.querySelectorAll('.slider-class');
+    sliders.forEach(slider => {
+        slider.addEventListener('input', function() {
+            console.log("Slider value:", slider.value);
+            // Additional logic for slider input
+        });
+    });
+});
