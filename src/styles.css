@@ -75,6 +75,18 @@ button:disabled {
   padding: 24px;
   margin: 0px;
   overflow: hidden;
+  
+  /* New transparent styles */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
+  /* Additional styles to ensure proper positioning */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 #btn-container {
@@ -87,6 +99,20 @@ button:disabled {
     position: relative;
     overflow: hidden;
 }
+#app {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+
+
+
+
+
+
+
 
 .evi-section::before {
     content: '';
