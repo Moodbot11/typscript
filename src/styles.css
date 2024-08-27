@@ -197,30 +197,30 @@ button:disabled {
   margin-bottom: 1rem;
 }
 
-#chat {
-  height: 300px;
-  overflow-y: auto;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  background: rgba(255, 255, 255, 0.05);
-  scrollbar-width: thin;
-  scrollbar-color: #4a5568 #2d3748;
+//#chat {
+ // height: 300px;
+//  overflow-y: auto;
+//  padding: 10px;
+//  border-bottom: 1px solid #eee;
+//  background: rgba(255, 255, 255, 0.05);
+//  scrollbar-width: thin;
+//  scrollbar-color: #4a5568 #2d3748;
 }
 
-#chat::-webkit-scrollbar {
+//#chat::-webkit-scrollbar {
   width: 4px;
-}
+//}
 
-#chat::-webkit-scrollbar-track {
-  background: #2d3748;
-}
+//#chat::-webkit-scrollbar-track {
+//  background: #2d3748;
+//}
 
-#chat::-webkit-scrollbar-thumb {
-  background-color: #4a5568;
-  border-radius: 20px;
-}
+//#chat::-webkit-scrollbar-thumb {
+//  background-color: #4a5568;
+//  border-radius: 20px;
+//}
 
-.chat-card {
+//.chat-card {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
